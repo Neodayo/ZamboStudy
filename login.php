@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Id: " . $_SESSION['user_id'] . "<br>";
         echo "First Name: " . $_SESSION['Name'] . "<br>";
      
-        header("Location: homepage.html");
+        header("Location: homepage.php");
     }
 }
 ?>
