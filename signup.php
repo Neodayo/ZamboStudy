@@ -1,5 +1,5 @@
 <?php
-// Include database connection
+// Include database connection  
 include 'db_connect.php';
 
 $message = ""; // To display success or error messages
@@ -66,6 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <label>What subject/s are you best in?</label>
         <input type="text" name="Course" placeholder="Course" id="Course"       require>
+
+
+        <label>Barangay</label>
+        <input type="text" name="Barangay" placeholder="Barangay" id="Barangay"       require>
 
         <button class="submit-button">Create account</button>
     </div>
