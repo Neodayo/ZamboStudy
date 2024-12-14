@@ -48,28 +48,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="title">
             ZamboStudy
         </div>
+        
+        <form action="signup.php" method="POST">
 
-        <label>Name</label>
+        <label for="name">Name</label>
         <div class="input-group">
-            <input type="text" name="Name" placeholder="Name " id="Name" require>
+            <input type="text" name="Name" placeholder="Name " id="Name" required>
             
         </div>
 
-        <label>Email</label>
+        <label for="email">Email</label>
         <div class="input-group">
-            <input type="text" name="Email" placeholder="Email" id="Email" require>
+            <input type="email" name="Email" placeholder="Email" id="Email" required>
             
         </div>
 
-        <label>Password</label>
-        <input type="text" name="Password" placeholder="Password" id="Password" class="Password" require>
+        <label for="password">Password</label>
+        <input type="text" name="Password" placeholder="Password" id="Password" class="Password" required>
 
-        <label>What subject/s are you best in?</label>
-        <input type="text" name="Course" placeholder="Course" id="Course"       require>
+        <label for="course">What subject/s are you best in?</label>
+        <input type="text" name="Course" placeholder="Course" id="Course"       required>
 
 
-        <label>Barangay</label>
-        <input type="text" name="Barangay" placeholder="Barangay" id="Barangay"       require>
+        <label for="barangay">Barangay</label>
+        <input type="text" name="Barangay" placeholder="Barangay" id="Barangay"  required>
 
         <div id="submit">
             <input type="submit" class="submit-button">
