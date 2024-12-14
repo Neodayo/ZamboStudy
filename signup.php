@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include 'C:\xampp\htdocs\HarvestHub\db_connect.php';
+include 'C:\xampp\htdocs\ZamboStudy\db_connect.php';
 
 $message = ""; // To display success or error messages
 
@@ -62,10 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <label>Password</label>
-        <input type="text" placeholder="Password" id="Password" class="Password">
+        <input type="text" name="Password" placeholder="Password" id="Password" class="Password" require>
 
         <label>What subject/s are you best in?</label>
-        <input type="text" name="Course" placeholder="Course" class="Course">
+        <input type="text" name="Course" placeholder="Course" require>
 
         <button class="submit-button">Create account</button>
     </div>
