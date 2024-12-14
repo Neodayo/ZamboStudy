@@ -20,7 +20,7 @@
 
         <label>Name</label>
         <div class="input-group">
-            <input type="text" name="name" placeholder="Name" id="name"require>
+            <input type="text" name="name" placeholder="tite " id="name"require>
             
         </div>
 
