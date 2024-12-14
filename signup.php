@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="text" name="Password" placeholder="Password" id="Password" class="Password" required>
 
         <label for="course">What subject/s are you best in?</label>
-        <input type="text" name="Course" placeholder="Course" id="Course"       required>
+        <input type="text" name="Course" placeholder="Course" id="Course"required>
 
 
         <label for="barangay">Barangay</label>

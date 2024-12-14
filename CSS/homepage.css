@@ -17,6 +17,10 @@ body {
     color: white;
     min-height: 100vh;
     padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 200vh; /*kainin full view por*/
+    padding: 20px;  
 }
 
 .sidebar h2 {
@@ -30,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 300px;
 }
 
 .navbar .nav-icon {

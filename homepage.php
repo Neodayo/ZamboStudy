@@ -15,9 +15,8 @@
         <img src="images/ZamboStudyLogoClear.png" alt="ZamboStudy Logo" class="logo">
         <!-- Navigation Bar -->
         <div class="navbar">
-            <a href="#" class="nav-icon">👥 Users</a>
-            <a href="#" class="nav-icon">🔍 Search </a>
             <a href="profile.html" class="nav-icon">👤 Profile </a>
+            <a href="#" class="nav-icon">🔍 Search </a>
         </div>
     </div>
 
