@@ -39,7 +39,7 @@ $conn->close();
     <div class="sidebar">
         <img src="images/ZamboStudyLogoClear.png" alt="ZamboStudy Logo" class="logo">
         <div class="navbar">
-            <a href="index.php" class="nav-icon">🏠 Home</a>
+            <a href="homepage.php" class="nav-icon">🏠 Home</a>
             <a href="profile.html" class="nav-icon">👤 Profile</a>
         </div>
     </div>
