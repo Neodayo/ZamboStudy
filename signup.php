@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include 'C:\xampp\htdocs\ZamboStudy\db_connect.php';
+include 'db_connect.php';
 
 $message = ""; // To display success or error messages
 
@@ -9,19 +9,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $Name = $_POST['Name'];
     $Email = $_POST['Email'];
     $Password = md5($_POST['Password']); // Hash the password
-    $Bourse = $_POST['Course'];
+    $Course = $_POST['Course'];
     $Barangay = $_POST['Barangay'];
 
 
     // Check if the email already exists
-    $check_email = "SELECT * FROM user WHERE email = '$email'";
+    $check_email = "SELECT * FROM user WHERE Email = '$Email'";
     $result = $conn->query($check_email);
     
     if ($result->num_rows > 0) {
         $message = "This email is already registered.";
     } else {
         // Insert new user into the database
-        $sql = "INSERT INTO user (name, email, password, course, barangay ) VALUES ('$Name', '$Email', '$Password', '$Course', '$Barangay')";
+        $sql = "INSERT INTO user (Name, Email, Password, Course, Barangay ) VALUES ('$Name', '$Email', '$Password', '$Course', '$Barangay')";
         
         if ($conn->query($sql) === TRUE) {
             $message = "Registration successful! You can now log in.";
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <label>Email</label>
         <div class="input-group">
-            <input type="number" name="Email" placeholder="Email" id="Email" require>
+            <input type="text" name="Email" placeholder="Email" id="Email" require>
             
         </div>
 
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="text" name="Password" placeholder="Password" id="Password" class="Password" require>
 
         <label>What subject/s are you best in?</label>
-        <input type="text" name="Course" placeholder="Course" require>
+        <input type="text" name="Course" placeholder="Course" id="Course"       require>
 
         <button class="submit-button">Create account</button>
     </div>
