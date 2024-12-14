@@ -1,3 +1,5 @@
 <?php ?>
 
-this is a test
+this is a trait_exists
+
+tite
