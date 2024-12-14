@@ -71,8 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label>Barangay</label>
         <input type="text" name="Barangay" placeholder="Barangay" id="Barangay"       require>
 
-        <button class="submit-button">Create account</button>
-    </div>
+        <div id="submit">
+            <input type="submit" class="submit-button">
+        </div>
 </body>
 
 </html>
