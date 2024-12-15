@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $role = $_POST['role'];
-    $icon = $_POST['icon'];
+    $icon = $_POST['icon']; 
     $link = strtolower(str_replace(' ', '_', $title)) . ".html"; // Generate course link
 
     $sql = "INSERT INTO courses (title, role, icon, link) VALUES ('$title', '$role', '$icon', '$link')";
@@ -56,7 +56,7 @@ $conn->close();
             </select>
             
             <label for="icon">Icon (Optional):</label>
-            <input type="text" id="icon" name="icon" placeholder="Enter icon name or path">
+            <input type="file" id="icon" name="icon" placeholder="Enter icon name or path">
             
             <label for="link">Generated Link:</label>
             <p id="generated-link" style="font-weight: bold; color: green;">Generated Link: </p>

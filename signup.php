@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO user (Name, Email, Password, Course, Barangay ) VALUES ('$Name', '$Email', '$Password', '$Course', '$Barangay')";
         
         if ($conn->query($sql) === TRUE) {
-            $message = "Registration successful! You can now log in.";
+            header("Location: login.php");
         } else {
             $message = "Error: " . $conn->error;
         }
@@ -45,37 +45,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div class="signup-container">
-        <div class="title">
-            ZamboStudy
+        <div class="logo">
+        <img src="images/zambostudylogocropped.png" alt="ZamboStudy Logo" class="logo">
         </div>
         
         <form action="signup.php" method="POST">
 
         <label for="name">Name</label>
         <div class="input-group">
-            <input type="text" name="Name" placeholder="Name " id="Name" required>
-            
+            <input type="text" name="Name" placeholder="Name " id="Name" required>   
         </div>
 
         <label for="email">Email</label>
         <div class="input-group">
-            <input type="email" name="Email" placeholder="Email" id="Email" required>
-            
+            <input type="email" name="Email" placeholder="Email" id="Email" required> 
         </div>
 
         <label for="password">Password</label>
-        <input type="text" name="Password" placeholder="Password" id="Password" class="Password" required>
+        <div class="input-group">
+            <input type="text" name="Password" placeholder="Password" id="Password" class="Password" required>
+        </div>
 
         <label for="course">What subject/s are you best in?</label>
-        <input type="text" name="Course" placeholder="Course" id="Course"required>
-
+        <div class="input-group">
+            <input type="text" name="Course" placeholder="Course" id="Course" required>
+        </div>
 
         <label for="barangay">Barangay</label>
-        <input type="text" name="Barangay" placeholder="Barangay" id="Barangay"  required>
+        <div class="input-group">
+            <input type="text" name="Barangay" placeholder="Barangay" id="Barangay"  required>
+        </div>
 
         <div id="submit">
             <input type="submit" class="submit-button">
         </div>
+</div>
 </body>
 
 </html>

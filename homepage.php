@@ -1,20 +1,25 @@
 <?php
-// Database connection
 $servername = "localhost";
 $username = "root";
 $password = ""; // Replace with your password
 $dbname = "zambostudy"; // Replace with your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+session_start();
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
 
 // Fetch courses
 $sql = "SELECT Id, title, role, icon, link FROM courses";
 $result = $conn->query($sql);
+
+if (!isset($_SESSION['user_id']) ) {
+     header("Location: login.php");
+    exit;
+}
+
+include 'db_connect.php';
+
 ?>
 
 <!DOCTYPE html>

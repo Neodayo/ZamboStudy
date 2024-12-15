@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #009999, #e0f5f5); /* Matches theme */
+}
+
+/* Main Homepage Container */
+.homepage-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Section */
+.logo-container {
+    
+    margin-bottom: 30px;
+}
+
+.homepage-logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-title {
+    font-size: 28px;
+    color: #009999;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Action Buttons Section */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-button {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 3px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    width: 100%;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+    background-color: #007bff; /* Blue for Log In */
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.signup-button {
+    background-color: #00cccc; /* Teal for Sign Up */
+}
+
+.signup-button:hover {
+    background-color: #009999;
+}

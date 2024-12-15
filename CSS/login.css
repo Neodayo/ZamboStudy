@@ -15,17 +15,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
+/* 
+.login-container img.logo {
+    width: 30px;
+    height: auto;
+} */
 
-.logo {
-    font-size: 32px;
-    color: black;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-.logo span {
-    display: block;
-}
+
 
 input[type="text"],
 input[type="password"] {

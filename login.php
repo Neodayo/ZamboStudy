@@ -45,11 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div class="login-container">
-        <div class="logo">
-            ZAMBO<br>
-            <!-- <img src="images/ZamboStudyLogoClear.png" alt="ZamboStudy Logo" class="logo"> -->
-        </div>
-
+        
+            
+            <img src="images/zambostudylogocropped.png" alt="ZamboStudy Logo" class="logo" style="width: 300px; height: auto">
+    
         <form method="POST" action="">
         <input type="text" name="Email" placeholder="Email" id="Email">
         <input type="password" name="Password" placeholder="Password" id="Password">
