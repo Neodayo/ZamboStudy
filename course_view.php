@@ -40,7 +40,7 @@ $conn->close();
         <img src="images/ZamboStudyLogoClear.png" alt="ZamboStudy Logo" class="logo">
         <div class="navbar">
             <a href="homepage.php" class="nav-icon">🏠 Home</a>
-            <a href="profile.html" class="nav-icon">👤 Profile</a>
+            <a href="profile.php" class="nav-icon">👤 Profile</a>
         </div>
     </div>
 

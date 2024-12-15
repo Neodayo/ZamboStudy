@@ -34,7 +34,7 @@ $result = $conn->query($sql);
         <!-- Navigation Bar -->
         <div class="navbar">
             <a href="profile.php" class="nav-icon">👤 Profile</a>
-            <a href="#" class="nav-icon">🔍 Search</a>
+            <a href="course_search_join.php" class="nav-icon">🔍 Search</a>
         </div>
     </div>
 
