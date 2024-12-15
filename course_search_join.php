@@ -66,7 +66,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search and Join Courses</title>
-    <link rel="stylesheet" href="CSS/search_courses.css">
+    <link rel="stylesheet" href="CSS/course_search.css">
 </head>
 <body>
     <div class="container">
