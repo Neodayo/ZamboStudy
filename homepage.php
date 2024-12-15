@@ -33,7 +33,7 @@ $result = $conn->query($sql);
         <img src="images/ZamboStudyLogoClear.png" alt="ZamboStudy Logo" class="logo">
         <!-- Navigation Bar -->
         <div class="navbar">
-            <a href="profile.html" class="nav-icon">👤 Profile</a>
+            <a href="profile.php" class="nav-icon">👤 Profile</a>
             <a href="#" class="nav-icon">🔍 Search</a>
         </div>
     </div>
