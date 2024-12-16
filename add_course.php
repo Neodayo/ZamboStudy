@@ -7,22 +7,37 @@ $dbname = "zambostudy"; // Replace with your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+session_start();  // Start the session to access session data
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $role = $_POST['role'];
     $icon = $_POST['icon']; 
     $link = strtolower(str_replace(' ', '_', $title)) . ".html"; // Generate course link
 
+    // Step 1: Insert the course into the courses table
     $sql = "INSERT INTO courses (title, role, icon, link) VALUES ('$title', '$role', '$icon', '$link')";
     if ($conn->query($sql) === TRUE) {
-        echo "New course added successfully!";
-        header("Location: homepage.php"); // Redirect to the homepage
+        $course_id = $conn->insert_id;  // Get the newly created course's ID
+
+        // Step 2: Assign the logged-in user to this course with the specified role
+        $user_id = $_SESSION['user_id']; 
+        $insert_user_course = "INSERT INTO user_courses (user_id, course_id, role) VALUES ('$user_id', '$course_id', '$role')";
+
+        if ($conn->query($insert_user_course) === TRUE) {
+            echo "New course added successfully and your role has been set for this course!";
+            header("Location: homepage.php"); 
+        } else {
+            echo "Error: " . $insert_user_course . "<br>" . $conn->error;
+        }
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
+
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,9 +70,9 @@ $conn->close();
                 <option value="Student">Student</option>
             </select>
             
-            <label for="icon">Icon (Optional):</label>
+            <!-- <label for="icon">Icon (Optional):</label>
             <input type="file" id="icon" name="icon" placeholder="Enter icon name or path">
-            
+             -->
             <label for="link">Generated Link:</label>
             <p id="generated-link" style="font-weight: bold; color: green;">Generated Link: </p>
             <input type="hidden" id="link" name="link" required>

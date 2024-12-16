@@ -1,9 +1,13 @@
 body {
-    background-color: #009999;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
     display: flex;
-    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #009999, #e0f5f5);
 }
+
 
 .container {
     width: 1200px;

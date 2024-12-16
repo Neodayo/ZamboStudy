@@ -18,7 +18,7 @@ $sql = "SELECT * FROM courses WHERE id = $course_id";
 $result = $conn->query($sql);
 
 // Fetch tasks for this course
-$task_sql = "SELECT * FROM tasks WHERE course_id = $course_id";
+$task_sql = "SELECT * FROM task WHERE course_id = $course_id";
 $task_result = $conn->query($task_sql);
 
 $conn->close();
@@ -44,7 +44,7 @@ $conn->close();
 
     <div class="main-content">
         <div class="course-header">
-            <h1><?php echo htmlspecialchars($course['title']); ?></h1>
+            <h1><?php echo htmlspecialchars($course_id['title']); ?></h1>
         </div>
 
         <div class="course-body">

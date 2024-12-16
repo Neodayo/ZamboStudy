@@ -54,7 +54,7 @@ include 'db_connect.php';
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<a href="course_view.php?id=' . $row['Id'] . '" class="card">';
-                    echo '<div class="icon">' . $row['icon'] . '</div>';
+                    // echo '<div class="icon">' . $row['icon'] . '</div>';
                     echo '<div class="details">';
                     echo '<div class="title">' . htmlspecialchars($row['title']) . '</div>';
                     echo '<div class="subtitle">' . htmlspecialchars($row['role']) . '</div>';
